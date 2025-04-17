@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>威力彩生成器</title>
+</head>
+
+<body>
+  <script>
+    const rand = (min, max) => {
+      return Math.round(Math.random() * (max - min) + min);
+    }
+
+    const lotteryA = [];
+    const lotteryB = [];
+
+    while (lotteryA.length < 6) {
+      const randomNumber = rand(1, 38);
+      console.log(randomNumber)
+      if (!lotteryA.includes(randomNumber)) { lotteryA.push(randomNumber) }
+    }
+    lotteryB.push(rand(1, 8))
+    document.write(`A 區的數字是：${lotteryA}<br>`)
+    document.write(`B 區的數字是：${lotteryB}<br>`)
+  </script>
+
+</body>
+
+</html>
